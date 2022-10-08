@@ -21,7 +21,7 @@ let personalMovieDB = {
 
 function rememberMyFilms() {
     for (let i = 0; i < 2; i++){
-        let lastFilm = prompt('Один из последних просмотренных фильмов?', ''),
+        let lastFilm = prompt('Один из последних просмотренных фильмов?', '').trim(),
             ratingFilm = +prompt('На сколько оцените его?', '');
         if(lastFilm != null && ratingFilm != null && lastFilm != '' && ratingFilm != '' && lastFilm.length < 50){
             personalMovieDB.movies[lastFilm] = ratingFilm;
